@@ -1,5 +1,6 @@
-import * as React from 'react';
-import { Navigation , TextInput} from './routes/homeStack';
+import React, { useState } from 'react';
+import { StyleSheet, Text, View, Image, Button, ScrollView, TextInput } from 'react-native';
+import { StatusBar } from 'expo-status-bar';
 
 export default function App() {
   const [name, setName] = useState('');
@@ -10,7 +11,7 @@ export default function App() {
         <View style={styles.header}>
           <Text style={styles.textFont}>Dancing Through Life</Text>
           <View style={styles.buttonContainer}>
-            <Button title='REGISTER'/> {/* add onPress={clickHandler} here after */}
+            <Button title='REGISTER' onPress={() => alert('Scroll down to register')}/> 
           </View>
         </View>
         <View style={styles.body}>
@@ -35,7 +36,13 @@ export default function App() {
             onChangeText={setEmail}
             style={styles.input}
           />
-          <Button title="Submit Registration" onPress={() => alert(`Registered: ${name}, ${email}`)} />
+          <Button title="Submit Registration" onPress={() => {
+            if (!name||!email){
+              alert("Please fill all fields");
+            } else{
+              alert(`Registered: ${name}, ${email}`);
+            }
+          }} />
         </View>
         <StatusBar style="auto" />
       </View>
