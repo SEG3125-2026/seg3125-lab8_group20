@@ -4,6 +4,11 @@ import { createStaticNavigation } from '@react-navigation/native';
 import HomeScreen from '../screens/homescreen';
 import ClassSchedulesScreen from '../screens/class_schedules';
 import ClassOverviewScreen from '../screens/classoverview';
+import BalletScreen from '../screens/ballet';
+import TapScreen from '../screens/tap';
+import JazzScreen from '../screens/jazz';
+import HiphopScreen from '../screens/hiphop';
+import LyricalScreen from '../screens/lyrical';
 import OurClassesScreen from '../screens/ourclasses';
 import OurIntructorScreen from '../screens/ourinstructors';
 import ContactScreen from '../screens/contact';
@@ -23,6 +28,21 @@ const HomeStack = createNativeStackNavigator({
         },
         ClassOverview: {
         screen: ClassOverviewScreen,
+        },
+        Ballet: {
+        screen: BalletScreen,
+        },
+        Tap: {
+        screen: TapScreen,
+        },
+        Jazz: {
+        screen: JazzScreen,
+        },
+        HipHop: {
+        screen: HiphopScreen,
+        },
+        Lyrical: {
+        screen: LyricalScreen,
         },
         // OurInstructor: {
         // screen: OurIntructorScreen,
