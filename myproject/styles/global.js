@@ -16,6 +16,12 @@ export const globalStyles = StyleSheet.create({
         fontFamily: 'nunito',
         textAlign: 'center',
     },
+     paragraph2: {
+        marginVertical: 10,
+        lineHeight: 20,
+        fontFamily: 'nunito',
+        textAlign: 'left',
+    },
     boldText:{
         fontWeight: 'bold',
     },

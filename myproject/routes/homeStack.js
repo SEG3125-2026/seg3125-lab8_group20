@@ -21,9 +21,9 @@ const HomeStack = createNativeStackNavigator({
         OurClasses: {
         screen: OurClassesScreen,
         },
-        // ClassOverview: {
-        // screen: ClassOverviewScreen,
-        // },
+        ClassOverview: {
+        screen: ClassOverviewScreen,
+        },
         // OurInstructor: {
         // screen: OurIntructorScreen,
         // },

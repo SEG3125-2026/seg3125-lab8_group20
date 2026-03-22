@@ -1,6 +1,6 @@
 import React from 'react';
 import { globalStyles } from '../styles/global';
-import { StyleSheet, Text, View, Button, ScrollView, Image, StatusBar, TextInput, FlatList, TouchableOpacity} from 'react-native';
+import { StyleSheet, Text, View, Button, ScrollView} from 'react-native';
 import { useNavigation } from '@react-navigation/native';
 import {Card, Title ,Paragraph } from 'react-native-paper';
 
@@ -8,7 +8,7 @@ import {Card, Title ,Paragraph } from 'react-native-paper';
 export default function OurClassesScreen(){
     const navigation = useNavigation();
     const pressHandler = () => {
-        navigation.navigate('Home')
+        navigation.navigate('ClassOverview')
     };
     return(
         <ScrollView>

@@ -8,7 +8,8 @@ export default function HomeScreen(){
   const pressHandler = () => {
     navigation.navigate('Register'),
     navigation.navigate('ClassSchedule'),
-    navigation.navigate('OurClasses')
+    navigation.navigate('OurClasses'),
+    navigation.navigate('ClassOverview')
   };
 
   return (
@@ -24,6 +25,7 @@ export default function HomeScreen(){
           <View style={styles.textStyle}>
             <Text style={globalStyles.paragraph} onPress={pressHandler}>Class Schedule</Text>
             <Text style={globalStyles.paragraph} onPress={pressHandler}>Our Classes</Text>
+            <Text style={globalStyles.paragraph} onPress={pressHandler}>Class Overview</Text>
           </View>
           <View style={globalStyles.imageContainer}>
               <Image source={require('../assets/Dance_studio_homepage.png')}
