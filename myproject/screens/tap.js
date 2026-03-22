@@ -12,21 +12,21 @@ export default function TapScreen(){
                 <Text style={globalStyles.bigTitleText}>What Students Will Learn</Text>
                 <FlatList
                     data={[
-                        {key: 'Ballet Terminology'},
-                        {key: 'Proper posture and alignment'},
-                        {key: 'Barre Exercises'},
-                        {key: 'Center combinations'},
-                        {key: 'Musicality and coordination'}
+                        {key: 'Tap Terminology'},
+                        {key: 'Balance and coordination'},
+                        {key: 'Conditioning Exercises'},
+                        {key: 'Rhythm and Flow'},
+                        {key: 'Musicality'}
                     ]}
                     renderItem={({item}) => <Text style={globalStyles.paragraph2}>{item.key}</Text>}
                     />
                 <Text style={globalStyles.bigTitleText}>Class details</Text>
                 <FlatList
                     data={[
-                        {key: 'Age Group: 7-14'},
-                        {key: 'Skill Level: Beginner - Intermediate - Advanced'},
+                        {key: 'Age Group: 12-17'},
+                        {key: 'Skill Level: Intermediate - Advanced'},
                         {key: 'Class length: 60 minutes'},
-                        {key: 'Dress Code: Leotard, tights, ballet slippers'}
+                        {key: 'Dress Code: T-Shirt, tights, and tap shoes'}
                     ]}
                     renderItem={({item}) => <Text style={globalStyles.paragraph2}>{item.key}</Text>
                     }

@@ -12,10 +12,10 @@ export default function JazzScreen(){
                 <Text style={globalStyles.bigTitleText}>What Students Will Learn</Text>
                 <FlatList
                     data={[
-                        {key: 'Ballet Terminology'},
+                        {key: 'Jazz Terminology'},
                         {key: 'Proper posture and alignment'},
-                        {key: 'Barre Exercises'},
-                        {key: 'Center combinations'},
+                        {key: 'Rhythm and flexibility'},
+                        {key: 'Duet dancing'},
                         {key: 'Musicality and coordination'}
                     ]}
                     renderItem={({item}) => <Text style={globalStyles.paragraph2}>{item.key}</Text>}
@@ -23,10 +23,10 @@ export default function JazzScreen(){
                 <Text style={globalStyles.bigTitleText}>Class details</Text>
                 <FlatList
                     data={[
-                        {key: 'Age Group: 7-14'},
-                        {key: 'Skill Level: Beginner - Intermediate - Advanced'},
+                        {key: 'Age Group: 8-13'},
+                        {key: 'Skill Level: Advanced'},
                         {key: 'Class length: 60 minutes'},
-                        {key: 'Dress Code: Leotard, tights, ballet slippers'}
+                        {key: 'Dress Code: Leotard, tights, and jazz shoes'}
                     ]}
                     renderItem={({item}) => <Text style={globalStyles.paragraph2}>{item.key}</Text>
                     }

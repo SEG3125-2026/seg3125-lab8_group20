@@ -26,7 +26,7 @@ export default function BalletScreen(){
                         {key: 'Age Group: 7-14'},
                         {key: 'Skill Level: Beginner - Intermediate - Advanced'},
                         {key: 'Class length: 60 minutes'},
-                        {key: 'Dress Code: Leotard, tights, ballet slippers'}
+                        {key: 'Dress Code: Leotard, tights, and ballet slippers'}
                     ]}
                     renderItem={({item}) => <Text style={globalStyles.paragraph2}>{item.key}</Text>
                     }
