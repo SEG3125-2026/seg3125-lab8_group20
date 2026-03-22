@@ -8,8 +8,6 @@ export default function HomeScreen(){
   const pressHandler = () =>{
     navigation.navigate('Register')
   }
-//   const [name, setName] = useState('');
-//   const [email, setEmail] = useState('');
   return (
     <ScrollView>
       <View style={styles.container}>
@@ -28,26 +26,6 @@ export default function HomeScreen(){
                 New and experienced dancers are welcome, we would love to have you join us!</Text>
           <Text style={globalStyles.paragraph}>Please contact us if you are new to dance. 
                 Please register for a class if you are an experienced dancer.</Text>
-          {/* <Text style={globalStyles.paragraph}>Register for a Class</Text>
-          <TextInput
-            placeholder="Enter your name"
-            value={name}
-            onChangeText={setName}
-            style={styles.input}
-          />
-          <TextInput
-            placeholder="Enter your email"
-            value={email}
-            onChangeText={setEmail}
-            style={styles.input}
-          />
-          <Button title="Submit Registration" onPress={() => {
-            if (!name||!email){
-              alert("Please fill all fields");
-            } else{
-              alert(`Registered: ${name}, ${email}`);
-            }
-          }} /> */}
         </View>
         <StatusBar style="auto" />
       </View>
