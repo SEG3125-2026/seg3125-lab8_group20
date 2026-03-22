@@ -5,9 +5,10 @@ import { useNavigation } from '@react-navigation/native';
 
 export default function HomeScreen(){
   const navigation = useNavigation();
-  const pressHandler = () =>{
-    navigation.navigate('Register')
-  }
+  const pressHandler = () => {
+    navigation.navigate('Register'),
+    navigation.navigate('ClassSchedule')
+  };
   return (
     <ScrollView>
       <View style={styles.container}>
@@ -18,6 +19,9 @@ export default function HomeScreen(){
           </View>
         </View>
         <View style={styles.body}>
+          <View style={globalStyles.container}>
+            <Text style={styles.textStyle} onPress={pressHandler}>Class Schedule</Text>
+          </View>
           <View style={styles.imageContainer}>
               <Image source={require('../assets/Dance_studio_homepage.png')}
                      style={{height: 400 , width: 375, resizeMode: 'contain'}}/>
@@ -43,6 +47,11 @@ const styles = StyleSheet.create({
       padding: 5,
       flexDirection: 'row',
       justifyContent: 'space-around',
+    },
+    textStyle:{
+      justifyContent: 'space-around',
+      padding: 5,
+      fontFamily: 'nunito',
     },
     body:{
       backgroundColor: 'white',
