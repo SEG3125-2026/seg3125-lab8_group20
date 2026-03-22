@@ -25,7 +25,7 @@ export default function HomeScreen(){
             <Text style={globalStyles.paragraph} onPress={pressHandler}>Class Schedule</Text>
             <Text style={globalStyles.paragraph} onPress={pressHandler}>Our Classes</Text>
           </View>
-          <View style={styles.imageContainer}>
+          <View style={globalStyles.imageContainer}>
               <Image source={require('../assets/Dance_studio_homepage.png')}
                      style={{height: 400 , width: 375, resizeMode: 'contain'}}/>
           </View>
@@ -64,9 +64,5 @@ const styles = StyleSheet.create({
     buttonContainer: {
       fontFamily: 'ui-rounded',
       fontWeight: '400',
-    },
-    imageContainer:{
-    flex:1,
-    alignItems: 'center',
     },
 });

@@ -3,7 +3,7 @@ import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { createStaticNavigation } from '@react-navigation/native';
 import HomeScreen from '../screens/homescreen';
 import ClassSchedulesScreen from '../screens/class_schedules';
-import PastPerformanceScreen from '../screens/pastperformances';
+import ClassOverviewScreen from '../screens/classoverview';
 import OurClassesScreen from '../screens/ourclasses';
 import OurIntructorScreen from '../screens/ourinstructors';
 import ContactScreen from '../screens/contact';
@@ -18,12 +18,12 @@ const HomeStack = createNativeStackNavigator({
         ClassSchedule: {
         screen: ClassSchedulesScreen,
         },
-        // PastPerformance: {
-        // screen: PastPerformanceScreen,
-        // },
         OurClasses: {
         screen: OurClassesScreen,
         },
+        // ClassOverview: {
+        // screen: ClassOverviewScreen,
+        // },
         // OurInstructor: {
         // screen: OurIntructorScreen,
         // },

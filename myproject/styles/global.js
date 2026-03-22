@@ -3,15 +3,15 @@ import { StyleSheet } from "react-native";
 export const globalStyles = StyleSheet.create({
     container: {
         flex: 1,
-        padding: 24,
+        padding: 20,
     },
     titleText:{
         fontFamily: 'nunito-bold',
-        fontSize: 18,
+        fontSize: 20,
         color: '#fff'
     },
     paragraph: {
-        marginVertical: 8,
+        marginVertical: 10,
         lineHeight: 20,
         fontFamily: 'nunito',
         textAlign: 'center',
@@ -31,5 +31,10 @@ export const globalStyles = StyleSheet.create({
         fontWeight: 'bold',
         fontFamily: 'nunito',
         textAlign: 'center',
-    }
+    },
+    imageContainer:{
+        flex:1,
+        alignItems: 'center',
+        resizeMode: 'contain',
+    },
 })
