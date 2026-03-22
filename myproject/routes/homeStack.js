@@ -8,6 +8,7 @@ import OurClassesScreen from '../screens/ourclasses';
 import OurIntructorScreen from '../screens/ourinstructors';
 import ContactScreen from '../screens/contact';
 import LeaveAReviewScreen from '../screens/leaveareview';
+import Register from '../screens/register';
 
 const HomeStack = createNativeStackNavigator({
     screens:{
@@ -31,7 +32,10 @@ const HomeStack = createNativeStackNavigator({
         // },
         // LeaveAReview: {
         // screen: LeaveAReviewScreen,
-        // }
+        // },
+        // Register: {
+        //     screen: RegisterScreen,
+        // },
     }
 });
 
