@@ -1,10 +1,10 @@
 import { StatusBar } from 'expo-status-bar';
 import React, { useState } from 'react';
-import { StyleSheet, Text, View, Button, ScrollView, Image} from 'react-native';
+import { StyleSheet, Text, View, Button, ScrollView, Image, TextInput} from 'react-native';
 
 export default function App() {
-  // const clickHandler = () => 
-
+  const [name, setName] = useState('');
+  const [email, setEmail] = useState('');
   return (
     <ScrollView>
       <View style={styles.container}>
@@ -23,6 +23,20 @@ export default function App() {
                 New and experienced dancers are welcome, we would love to have you join us!</Text>
           <Text style={styles.textFont}>Please contact us if you are new to dance. 
                 Please register for a class if you are an experienced dancer.</Text>
+          <Text style={styles.textFont}>Register for a Class</Text>
+          <TextInput
+            placeholder="Enter your name"
+            value={name}
+            onChangeText={setName}
+            style={styles.input}
+          />
+          <TextInput
+            placeholder="Enter your email"
+            value={email}
+            onChangeText={setEmail}
+            style={styles.input}
+          />
+          <Button title="Submit Registration" onPress={() => alert(`Registered: ${name}, ${email}`)} />
         </View>
         <StatusBar style="auto" />
       </View>
@@ -62,5 +76,12 @@ const styles = StyleSheet.create({
   imageContainer:{
     flex:1,
     alignItems: 'center',
+  },
+  input:{
+    borderWidth: 1,
+    borderColor: '#ccc',
+    padding: 10,
+    marginVertical: 10,
+    borderRadius: 5,
   }
 });
