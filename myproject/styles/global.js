@@ -19,4 +19,11 @@ export const globalStyles = StyleSheet.create({
     boldText:{
         fontWeight: 'bold',
     },
+    input:{
+    borderWidth: 1,
+    borderColor: '#ccc',
+    padding: 10,
+    marginVertical: 10,
+    borderRadius: 5,
+  }
 })

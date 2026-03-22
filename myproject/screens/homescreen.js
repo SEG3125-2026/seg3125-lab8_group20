@@ -1,17 +1,22 @@
 import React, { useState } from 'react';
 import { globalStyles } from '../styles/global'
-import { StyleSheet, Text, View, Button, ScrollView, Image, StatusBar, TextInput} from 'react-native';
+import { StyleSheet, Text, View, Button, ScrollView, Image, StatusBar} from 'react-native';
+import { useNavigation } from '@react-navigation/native';
 
-export default function HomeScreen({ navigation }){
-const [name, setName] = useState('');
-  const [email, setEmail] = useState('');
+export default function HomeScreen(){
+  const navigation = useNavigation();
+  const pressHandler = () =>{
+    navigation.navigate('Register')
+  }
+//   const [name, setName] = useState('');
+//   const [email, setEmail] = useState('');
   return (
     <ScrollView>
       <View style={styles.container}>
         <View style={styles.header}>
           <Text style={globalStyles.titleText}>Dancing Through Life</Text>
           <View style={styles.buttonContainer}>
-            <Button title='REGISTER' onPress={() => alert('Scroll down to register')}/> 
+            <Button title='REGISTER' onPress={pressHandler}/> 
           </View>
         </View>
         <View style={styles.body}>
@@ -23,7 +28,7 @@ const [name, setName] = useState('');
                 New and experienced dancers are welcome, we would love to have you join us!</Text>
           <Text style={globalStyles.paragraph}>Please contact us if you are new to dance. 
                 Please register for a class if you are an experienced dancer.</Text>
-          <Text style={globalStyles.paragraph}>Register for a Class</Text>
+          {/* <Text style={globalStyles.paragraph}>Register for a Class</Text>
           <TextInput
             placeholder="Enter your name"
             value={name}
@@ -42,7 +47,7 @@ const [name, setName] = useState('');
             } else{
               alert(`Registered: ${name}, ${email}`);
             }
-          }} />
+          }} /> */}
         </View>
         <StatusBar style="auto" />
       </View>
@@ -69,21 +74,8 @@ const styles = StyleSheet.create({
       fontFamily: 'ui-rounded',
       fontWeight: '400',
     },
-    textFont:{
-      fontFamily: 'ui-rounded',
-      fontWeight: '400',
-      textAlign: 'center',
-      padding: 15,
-    },
     imageContainer:{
     flex:1,
     alignItems: 'center',
-  },
-  input:{
-    borderWidth: 1,
-    borderColor: '#ccc',
-    padding: 10,
-    marginVertical: 10,
-    borderRadius: 5,
-  }
+    },
 });
