@@ -1,4 +1,4 @@
-
+import { globalStyles } from '../styles/global'
 import { StyleSheet, Text, View, Button, ScrollView, Image, StatusBar} from 'react-native';
 
 export default function HomeScreen(){
@@ -6,7 +6,7 @@ export default function HomeScreen(){
         <ScrollView>
         <View style={styles.container}>
             <View style={styles.header}>
-            <Text style={styles.textFont}>Dancing Through Life</Text>
+            <Text style={globalStyles.titleText}>Dancing Through Life</Text>
             <View style={styles.buttonContainer}>
                 <Button title='REGISTER'/> {/* add onPress={clickHandler} here after */}
             </View>
@@ -16,9 +16,9 @@ export default function HomeScreen(){
                 <Image source={require('../assets/Dance_studio_homepage.png')}
                         style={{height: 400 , width: 375, resizeMode: 'contain'}}/>
             </View>
-            <Text style={styles.textFont}>Make life long friendships and memories by joining our dance studio. 
+            <Text style={globalStyles.paragraph}>Make life long friendships and memories by joining our dance studio. 
                     New and experienced dancers are welcome, we would love to have you join us!</Text>
-            <Text style={styles.textFont}>Please contact us if you are new to dance. 
+            <Text style={globalStyles.paragraph}>Please contact us if you are new to dance. 
                     Please register for a class if you are an experienced dancer.</Text>
             </View>
             <StatusBar style="auto" />
@@ -48,13 +48,6 @@ const styles = StyleSheet.create({
   buttonContainer: {
     fontFamily: 'ui-rounded',
     fontWeight: '400',
-    //backgroundColor: '#fff'
-  },
-  textFont:{
-    fontFamily: 'ui-rounded',
-    fontWeight: '400',
-    textAlign: 'center',
-    padding: 15,
   },
   imageContainer:{
     flex:1,
