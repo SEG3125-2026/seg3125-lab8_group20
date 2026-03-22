@@ -1,0 +1,38 @@
+import * as React from 'react';
+import { createNativeStackNavigator } from '@react-navigation/native-stack';
+import { createStaticNavigation } from '@react-navigation/native';
+import HomeScreen from '../screens/homescreen';
+import ClassSchedulesScreen from '../screens/classschedules';
+import PastPerformanceScreen from '../screens/pastperformances';
+import OurClassesScreen from '../screens/ourclasses';
+import OurIntructorScreen from '../screens/ourinstructors';
+import ContactScreen from '../screens/contact';
+import LeaveAReviewScreen from '../screens/leaveareview';
+
+const HomeStack = createNativeStackNavigator({
+    screens:{
+        Home: {
+        screen: HomeScreen,
+        },
+        // ClassSchedule: {
+        // screen: ClassSchedulesScreen,
+        // },
+        // PastPerformance: {
+        // screen: PastPerformanceScreen,
+        // },
+        // OurClass: {
+        // screen: OurClassesScreen,
+        // },
+        // OurInstructor: {
+        // screen: OurIntructorScreen,
+        // },
+        // Contact:{
+        // screen: ContactScreen,
+        // },
+        // LeaveAReview: {
+        // screen: LeaveAReviewScreen,
+        // }
+    }
+});
+
+export const Navigation = createStaticNavigation(HomeStack);
