@@ -47,5 +47,47 @@ export default function App() {
         <StatusBar style="auto" />
       </View>
     </ScrollView>
-  );
+    );
 }
+
+const styles = StyleSheet.create({
+      container: {
+      flex: 1,
+      backgroundColor: '#fff',
+    },
+    header: {
+      backgroundColor: '#8A34B2',
+      padding: 5,
+      flexDirection: 'row',
+      justifyContent: 'space-around',
+    },
+    boldText:{
+      fontWeight: 'bold',
+    },
+    body:{
+      backgroundColor: 'white',
+      padding: 20,
+    },
+    buttonContainer: {
+      fontFamily: 'ui-rounded',
+      fontWeight: '400',
+    },
+    textFont:{
+      fontFamily: 'ui-rounded',
+      fontWeight: '400',
+      textAlign: 'center',
+      padding: 15,
+    },
+    imageContainer:{
+    flex:1,
+    alignItems: 'center',
+  },
+  input:{
+    borderWidth: 1,
+    borderColor: '#ccc',
+    padding: 10,
+    marginVertical: 10,
+    borderRadius: 5,
+  }
+
+});
