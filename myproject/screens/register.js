@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { globalStyles } from '../styles/global'
-import { StyleSheet, Text, View, Button, ScrollView, Image, StatusBar, TextInput} from 'react-native';
+import { Text, View, Button, ScrollView,TextInput} from 'react-native';
 
 export default function RegisterScreen(){
     const [name, setName] = useState('');
@@ -14,13 +14,13 @@ export default function RegisterScreen(){
                 placeholder="Enter your name"
                 value={name}
                 onChangeText={setName}
-                style={styles.input}
+                style={globalStyles.input}
                 />
                 <TextInput
                 placeholder="Enter your email"
                 value={email}
                 onChangeText={setEmail}
-                style={styles.input}
+                style={globalStyles.input}
                 />
                 <Button title="Submit Registration" onPress={() => {
                 if (!name||!email){
@@ -33,28 +33,3 @@ export default function RegisterScreen(){
     </ScrollView>
     )
 }
-
-const styles = StyleSheet.create({
-      container: {
-      flex: 1,
-      backgroundColor: '#fff',
-    },
-    header: {
-      backgroundColor: '#8A34B2',
-      padding: 5,
-      flexDirection: 'row',
-      justifyContent: 'space-around',
-    },
-    body:{
-      backgroundColor: 'white',
-      padding: 20,
-    },
-    buttonContainer: {
-      fontFamily: 'ui-rounded',
-      fontWeight: '400',
-    },
-    imageContainer:{
-    flex:1,
-    alignItems: 'center',
-    },
-});
