@@ -1,14 +1,16 @@
+import * as React from 'react';
 import { globalStyles } from '../styles/global'
 import { StyleSheet, Text, View, Button, ScrollView, Image, StatusBar} from 'react-native';
 
-export default function HomeScreen(){
+export default function HomeScreen({ navigation }){
+
     return (
         <ScrollView>
         <View style={styles.container}>
             <View style={styles.header}>
             <Text style={globalStyles.titleText}>Dancing Through Life</Text>
             <View style={styles.buttonContainer}>
-                <Button title='REGISTER'/> {/* add onPress={clickHandler} here after */}
+                <Button title='REGISTER'/> 
             </View>
             </View>
             <View style={styles.body}>
@@ -16,10 +18,8 @@ export default function HomeScreen(){
                 <Image source={require('../assets/Dance_studio_homepage.png')}
                         style={{height: 400 , width: 375, resizeMode: 'contain'}}/>
             </View>
-            <Text style={globalStyles.paragraph}>Make life long friendships and memories by joining our dance studio. 
-                    New and experienced dancers are welcome, we would love to have you join us!</Text>
-            <Text style={globalStyles.paragraph}>Please contact us if you are new to dance. 
-                    Please register for a class if you are an experienced dancer.</Text>
+            <Text style={globalStyles.paragraph}>Make life long friendships and memories by joining our dance studio. New and experienced dancers are welcome, we would love to have you join us!</Text>
+            <Text style={globalStyles.paragraph}>Please contact us if you are new to dance. Please register for a class if you are an experienced dancer.</Text>
             </View>
             <StatusBar style="auto" />
         </View>
@@ -37,9 +37,6 @@ const styles = StyleSheet.create({
     padding: 5,
     flexDirection: 'row',
     justifyContent: 'space-around',
-  },
-  boldText:{
-    fontWeight: 'bold',
   },
   body:{
     backgroundColor: 'white',

@@ -15,5 +15,8 @@ export const globalStyles = StyleSheet.create({
         lineHeight: 20,
         fontFamily: 'nunito',
         textAlign: 'center',
-    }
+    },
+    boldText:{
+        fontWeight: 'bold',
+    },
 })
