@@ -1,4 +1,3 @@
-import React, { useState } from 'react';
 import { globalStyles } from '../styles/global';
 import { Calendar } from 'react-native-calendars';
 import { StyleSheet, Text, View, Button, ScrollView, Image, StatusBar, TextInput} from 'react-native';
@@ -12,6 +11,7 @@ export default function ClassSchedulesScreen(){
     return(
         <ScrollView>
             <View style={globalStyles.container}>
+            <Text style={globalStyles.bigTitleText}>Class Schedule</Text>
                 <Calendar>   
                 </Calendar>
             </View>
@@ -20,5 +20,4 @@ export default function ClassSchedulesScreen(){
             </View>
         </ScrollView>
     )
-
 }

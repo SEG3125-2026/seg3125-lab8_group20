@@ -20,10 +20,16 @@ export const globalStyles = StyleSheet.create({
         fontWeight: 'bold',
     },
     input:{
-    borderWidth: 1,
-    borderColor: '#ccc',
-    padding: 10,
-    marginVertical: 10,
-    borderRadius: 5,
-  }
+        borderWidth: 1,
+        borderColor: '#ccc',
+        padding: 10,
+        marginVertical: 10,
+        borderRadius: 5,
+    },
+    bigTitleText: {
+        fontSize: 30,
+        fontWeight: 'bold',
+        fontFamily: 'nunito',
+        textAlign: 'center',
+    }
 })

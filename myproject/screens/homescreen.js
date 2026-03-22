@@ -7,8 +7,10 @@ export default function HomeScreen(){
   const navigation = useNavigation();
   const pressHandler = () => {
     navigation.navigate('Register'),
-    navigation.navigate('ClassSchedule')
+    navigation.navigate('ClassSchedule'),
+    navigation.navigate('OurClasses')
   };
+
   return (
     <ScrollView>
       <View style={styles.container}>
@@ -19,8 +21,9 @@ export default function HomeScreen(){
           </View>
         </View>
         <View style={styles.body}>
-          <View style={globalStyles.container}>
-            <Text style={styles.textStyle} onPress={pressHandler}>Class Schedule</Text>
+          <View style={styles.textStyle}>
+            <Text style={globalStyles.paragraph} onPress={pressHandler}>Class Schedule</Text>
+            <Text style={globalStyles.paragraph} onPress={pressHandler}>Our Classes</Text>
           </View>
           <View style={styles.imageContainer}>
               <Image source={require('../assets/Dance_studio_homepage.png')}
@@ -49,6 +52,7 @@ const styles = StyleSheet.create({
       justifyContent: 'space-around',
     },
     textStyle:{
+      flexDirection: 'row',
       justifyContent: 'space-around',
       padding: 5,
       fontFamily: 'nunito',
