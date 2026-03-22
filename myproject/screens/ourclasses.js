@@ -25,7 +25,7 @@ export default function OurClassesScreen(){
                     <Card.Cover source={require('../assets/ballet.png')}/>
                     <View style={globalStyles.imageContainer}>
                         <Card.Actions>
-                        <Button title='About'></Button>
+                        <Button title='About' onPress={() => navigation.navigate('Ballet')}></Button>
                     </Card.Actions>
                     </View>
                 </Card>
@@ -38,7 +38,7 @@ export default function OurClassesScreen(){
                     <Card.Cover source={require('../assets/tap.png')}/>
                     <View style={globalStyles.imageContainer}>
                         <Card.Actions>
-                        <Button title='About'></Button>
+                        <Button title='About' onPress={() => navigation.navigate('Tap')}></Button>
                     </Card.Actions>
                     </View>
                 </Card>
@@ -51,7 +51,7 @@ export default function OurClassesScreen(){
                     <Card.Cover source={require('../assets/lyrical.png')}/>
                     <View style={globalStyles.imageContainer}>
                         <Card.Actions>
-                        <Button title='About'></Button>
+                        <Button title='About' onPress={() => navigation.navigate('Lyrical')}></Button>
                     </Card.Actions>
                     </View>
                 </Card>
@@ -64,7 +64,7 @@ export default function OurClassesScreen(){
                     <Card.Cover source={require('../assets/hiphop.png')}/>
                     <View style={globalStyles.imageContainer}>
                         <Card.Actions>
-                        <Button title='About'></Button>
+                        <Button title='About' onPress={() => navigation.navigate('HipHop')}></Button>
                     </Card.Actions>
                     </View>
                 </Card>
@@ -77,7 +77,7 @@ export default function OurClassesScreen(){
                     <Card.Cover source={require('../assets/jazz.png')}/>
                     <View style={globalStyles.imageContainer}>
                         <Card.Actions>
-                        <Button title='About'></Button>
+                        <Button title='About' onPress={() => navigation.navigate('Jazz')}></Button>
                     </Card.Actions>
                     </View>
                 </Card>
