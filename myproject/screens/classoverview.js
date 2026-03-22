@@ -8,14 +8,14 @@ export default function ClassOverviewScreen(){
         navigation.navigate('Home')
     };
     return(
-            <View>
+            <View style={styles.layout}>
                 <Text style={globalStyles.bigTitleText}>Explore Our Classes</Text>
-                <View style={styles.layout}>
-                    <Text onPress={() => navigation.navigate('Ballet')}>Ballet</Text>
-                    <Text onPress={() => navigation.navigate('Tap')}>Tap</Text>
-                    <Text onPress={() => navigation.navigate('Jazz')}>Jazz</Text>
-                    <Text onPress={() => navigation.navigate('HipHop')}>Hip Hop</Text>
-                    <Text onPress={() => navigation.navigate('Lyrical')}>Lyrical</Text>
+                <View style={styles.layout2}>
+                    <Text style={styles.textFormat} onPress={() => navigation.navigate('Ballet')}>Ballet</Text>
+                    <Text style={styles.textFormat} onPress={() => navigation.navigate('Tap')}>Tap</Text>
+                    <Text style={styles.textFormat} onPress={() => navigation.navigate('Jazz')}>Jazz</Text>
+                    <Text style={styles.textFormat} onPress={() => navigation.navigate('HipHop')}>Hip Hop</Text>
+                    <Text style={styles.textFormat} onPress={() => navigation.navigate('Lyrical')}>Lyrical</Text>
                 </View>
             </View>
     )
@@ -24,7 +24,15 @@ export default function ClassOverviewScreen(){
 const styles = StyleSheet.create({
     layout: {
       flex: 1,
-      padding: 1,
-      justifyContent: 'space-around',
     },
+    layout2: {
+      flex: 1,
+      justifyContent: 'space-around',
+      flexDirection: 'column',
+    },
+    textFormat: {
+      fontSize: 20,
+      fontFamily: 'nunito',
+      margin: 5,
+    }
 })
