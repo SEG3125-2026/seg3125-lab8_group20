@@ -4,7 +4,6 @@ import { StyleSheet, Text, View, Button, ScrollView, TextInput} from 'react-nati
 import { useNavigation } from '@react-navigation/native';
 import { Picker } from '@react-native-picker/picker';
 
-
 export default function LeaveAReviewScreen(){
     const navigation = useNavigation();
     const pressHandler = () => {
@@ -53,8 +52,17 @@ export default function LeaveAReviewScreen(){
                     onChangeText={setComments}
                     style={globalStyles.input}
                 />
+
+                <Button title='Submit Review' onPress={() =>{
+                    if(!name || !email || rating === "" ||!comments ){
+                        alert("Please fill out all fields!")
+                    }else{
+                        alert(`sent`);
+                    }
+                }} />
                 </View>
            </ScrollView>
     );
 
 }
+

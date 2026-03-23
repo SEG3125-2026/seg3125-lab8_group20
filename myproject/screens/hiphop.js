@@ -5,10 +5,12 @@ import { useNavigation } from '@react-navigation/native';
 export default function HiphopScreen(){
     const navigation = useNavigation();
     const pressHandler = () => {
-        navigation.navigate('Home')
+        navigation.navigate('OurClasses')
     };
     return(
       <View style={globalStyles.container}>
+                      <Button title='Back' onPress={pressHandler} />
+
                 <Text style={globalStyles.bigTitleText}>What Students Will Learn</Text>
                 <FlatList
                     data={[
