@@ -9,6 +9,7 @@ export default function ContactScreen(){
     const pressHandler = () => {
         navigation.navigate('Home')
     };
+
     const [fname, setFName] = useState('');
     const [lname, setLName] = useState('');
     const [birthday,setBirthday] = useState('');
