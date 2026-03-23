@@ -1,14 +1,16 @@
 import { globalStyles } from '../styles/global';
-import { Text, View, StyleSheet} from 'react-native';
+import { Text, View, StyleSheet, Button} from 'react-native';
 import { useNavigation } from '@react-navigation/native';
 
 export default function ClassOverviewScreen(){
     const navigation = useNavigation();
     const pressHandler = () => {
-        navigation.navigate('Home')
+        navigation.navigate('OurClasses')
     };
     return(
             <View style={styles.layout}>
+                <Button title='Back' onPress={pressHandler} />
+
                 <Text style={globalStyles.bigTitleText}>Explore Our Classes</Text>
                 <View style={styles.layout2}>
                     <Text style={styles.textFormat} onPress={() => navigation.navigate('Ballet')}>Ballet</Text>

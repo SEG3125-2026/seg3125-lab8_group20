@@ -8,11 +8,12 @@ import {Card, Title ,Paragraph } from 'react-native-paper';
 export default function OurClassesScreen(){
     const navigation = useNavigation();
     const pressHandler = () => {
-        navigation.navigate('ClassOverview')
+        navigation.navigate('Home')
     };
     return(
         <ScrollView>
             <View style={styles.container}>
+                <Button title='Home' onPress={pressHandler} />
                 <Text style={globalStyles.bigTitleText}>
                     Our Classes
                 </Text>

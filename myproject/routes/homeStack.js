@@ -10,7 +10,7 @@ import JazzScreen from '../screens/jazz';
 import HiphopScreen from '../screens/hiphop';
 import LyricalScreen from '../screens/lyrical';
 import OurClassesScreen from '../screens/ourclasses';
-import OurIntructorScreen from '../screens/ourinstructors';
+import OurIntructorsScreen from '../screens/ourinstructors';
 import ContactScreen from '../screens/contact';
 import LeaveAReviewScreen from '../screens/leaveareview';
 import RegisterScreen from '../screens/register';
@@ -44,18 +44,18 @@ const HomeStack = createNativeStackNavigator({
         Lyrical: {
         screen: LyricalScreen,
         },
-        // OurInstructor: {
-        // screen: OurIntructorScreen,
-        // },
-        // Contact:{
-        // screen: ContactScreen,
-        // },
-        // LeaveAReview: {
-        // screen: LeaveAReviewScreen,
-        // },
+        OurInstructors: {
+        screen: OurIntructorsScreen ,
+        },
+         Contact:{
+         screen: ContactScreen,
+         },
+         LeaveAReview: {
+         screen: LeaveAReviewScreen,
+         },
         Register: {
             screen: RegisterScreen,
-        },
+        }
     }
 });
 

@@ -5,27 +5,37 @@ import { useNavigation } from '@react-navigation/native';
 
 export default function HomeScreen(){
   const navigation = useNavigation();
-  const pressHandler = () => {
-    navigation.navigate('Register'),
-    navigation.navigate('ClassSchedule'),
-    navigation.navigate('OurClasses'),
-    navigation.navigate('ClassOverview')
-  };
+  const pressHandlerRegister = () => navigation.navigate('Register');
+  const pressHandlerContact = () => navigation.navigate('Contact');
+  const pressHandlerClassSchedule = () => navigation.navigate('ClassSchedule');
+  const pressHandlerOurClasses = () => navigation.navigate('OurClasses');
+  const pressHandlerClassOverview= () => navigation.navigate('ClassOverview');
+  const pressHandlerOurInstructors = () => navigation.navigate('OurInstructors');
+  const pressHandlerLeaveAReview = () => navigation.navigate('LeaveAReview');
+
 
   return (
     <ScrollView>
       <View style={styles.container}>
         <View style={styles.header}>
+         <View style={styles.buttonContainer}>
+                    <Button title='CONTACT' onPress={pressHandlerContact}/>
+         </View>
           <Text style={globalStyles.titleText}>Dancing Through Life</Text>
           <View style={styles.buttonContainer}>
-            <Button title='REGISTER' onPress={pressHandler}/> 
+            <Button title='REGISTER' onPress={pressHandlerRegister}/>
           </View>
+
+
         </View>
         <View style={styles.body}>
           <View style={styles.textStyle}>
-            <Text style={globalStyles.paragraph} onPress={pressHandler}>Class Schedule</Text>
-            <Text style={globalStyles.paragraph} onPress={pressHandler}>Our Classes</Text>
-            <Text style={globalStyles.paragraph} onPress={pressHandler}>Class Overview</Text>
+            <Text style={globalStyles.paragraph} onPress={pressHandlerClassSchedule}>Class Schedule</Text>
+            <Text style={globalStyles.paragraph} onPress={pressHandlerOurClasses}>Our Classes</Text>
+            <Text style={globalStyles.paragraph} onPress={pressHandlerClassOverview}>Class Overview</Text>
+            <Text style={globalStyles.paragraph} onPress={pressHandlerOurInstructors}>Our Instructors</Text>
+            <Text style={globalStyles.paragraph} onPress={pressHandlerLeaveAReview}>Leave a Review</Text>
+
           </View>
           <View style={globalStyles.imageContainer}>
               <Image source={require('../assets/Dance_studio_homepage.png')}

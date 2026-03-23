@@ -10,14 +10,14 @@ export default function ClassSchedulesScreen(){
     };
     return(
         <ScrollView>
-            <View style={globalStyles.container}>
-            <Text style={globalStyles.bigTitleText}>Class Schedule</Text>
-                <Calendar>   
-                </Calendar>
-            </View>
-            <View style={globalStyles.container}>
+            <View>
                 <Button title='Home' onPress={pressHandler} />
             </View>
+            <View style={globalStyles.container}>
+                        <Text style={globalStyles.bigTitleText}>Class Schedule</Text>
+                            <Calendar>
+                            </Calendar>
+                        </View>
         </ScrollView>
     )
 }
